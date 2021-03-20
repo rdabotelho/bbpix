@@ -5,7 +5,12 @@ Biblioteca feita para facilitar a geração e consulta de arrecadação via PIX 
 ## Uso da Biblioteca
 
 Para usar a biblioteca basta configurar a dependência no arquivo do maven.
-
+```
+<repository>
+    <id>bbpix</id>
+    <url>https://raw.github.com/rdabotelho/mvn-repo/bbpix/</url>
+</repository>
+```
 ```
 <dependency>
     <groupId>com.m2r</groupId>
