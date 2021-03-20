@@ -10,7 +10,7 @@ Para usar a biblioteca basta configurar a dependência no arquivo do maven.
 <dependency>
     <groupId>com.m2r</groupId>
     <artifactId>bbpix</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
