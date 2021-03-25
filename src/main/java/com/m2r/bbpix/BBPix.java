@@ -71,7 +71,7 @@ public class BBPix {
                 .dataVencimento(vencimento)
                 .build();
         payload.setCodigoGuiaRecebimento(barcode.gerar());
-        return createClient().postArrecadacaoPix(tokenResponse.getAccess_token(), factory.getAmbiente().getAppKeyName(), factory.getAmbiente().getAppKeyValue(), payload);
+        return createClient().postArrecadacaoPix(tokenResponse.getAccess_token(), factory.getAmbiente().getAppKeyName(), factory.getAppKey(), payload);
     }
 
     public ArrecadacaoGetResponse obterPixArrecadacao(Integer numeroConvenio, String codigoConciliacaoSolicitante) {
@@ -79,7 +79,7 @@ public class BBPix {
             throw new RuntimeException("Codigo de conciliacao do solicitante não informado");
         }
         TokenResponse tokenResponse = getToken();
-        return createClient().getArrecadacaoPix(tokenResponse.getAccess_token(), factory.getAmbiente().getAppKeyName(), factory.getAmbiente().getAppKeyValue(), numeroConvenio, codigoConciliacaoSolicitante);
+        return createClient().getArrecadacaoPix(tokenResponse.getAccess_token(), factory.getAmbiente().getAppKeyName(), factory.getAppKey(), numeroConvenio, codigoConciliacaoSolicitante);
     }
 
 }

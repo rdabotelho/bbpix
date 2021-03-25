@@ -35,6 +35,7 @@ BBPixFactory factory = BBPixFactory.builder()
         .ambiente(AmbienteEnum.HOMOLOGACAO)
         .clientId(Const.CLIENT_ID)
         .clientSecret(Const.CLIENT_SECRET)
+        .gwAppKey(Const.GW_APP_KEY)
         .build();
 
 BBPix pix = factory.create();
@@ -71,6 +72,7 @@ BBPixFactory factory = BBPixFactory.builder()
         .ambiente(AmbienteEnum.HOMOLOGACAO)
         .clientId(Const.CLIENT_ID)
         .clientSecret(Const.CLIENT_SECRET)
+        .gwAppKey(Const.GW_APP_KEY)
         .build();
 
 BBPix pix = factory.create();

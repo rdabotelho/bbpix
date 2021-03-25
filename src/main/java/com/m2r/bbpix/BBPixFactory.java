@@ -7,6 +7,7 @@ public class BBPixFactory {
     private AmbienteEnum ambiente;
     private String clientId;
     private String clientSecret;
+    private String appKey;
 
     private BBPixFactory() {
     }
@@ -25,6 +26,10 @@ public class BBPixFactory {
 
     public String getClientSecret() {
         return clientSecret;
+    }
+
+    public String getAppKey() {
+        return appKey;
     }
 
     public static BBPixFactoryBuilder builder() {
@@ -48,10 +53,15 @@ public class BBPixFactory {
             this.factory.clientSecret = value;
             return this;
         }
+        public BBPixFactoryBuilder appKey(String value) {
+            this.factory.appKey = value;
+            return this;
+        }
         public BBPixFactory build() {
             if (this.factory.ambiente == null) throw new RuntimeException("Ambiente não definido");
             if (this.factory.clientId == null) throw new RuntimeException("ClientId não definido");
             if (this.factory.clientSecret == null) throw new RuntimeException("ClientSecret não definido");
+            if (this.factory.appKey == null) throw new RuntimeException("AppKey não definido");
             return this.factory;
         }
     }
