@@ -26,7 +26,7 @@ Para gerar uma arrecadação via PIX é necessário 4 informações:
 * CLIENT_ID: Credencial fornecida pelo banco.
 * CLIENT_SECRET: Senha da credencial fornecida pelo banco.
 * NUMERO_CONVENIO: Número do convênio de arrecadação do cliente.
-* CODIGO_SOLICITACAO_BANCO_CENTRAL: Código de solictação junto ao Banco Central.
+* CODIGO_SOLICITACAO_BANCO_CENTRAL: Chave PIX.
 
 ## Exemplo de garação
 
@@ -61,7 +61,7 @@ Para realizar consultar uma arrecadação via PIX é necessário 5 parâmetros:
 * CLIENT_ID: Credencial fornecida pelo banco.
 * CLIENT_SECRET: Senha da credencial fornecida pelo banco.
 * NUMERO_CONVENIO: Número do convênio de arrecadação do cliente.
-* CODIGO_SOLICITACAO_BANCO_CENTRAL: Código de solictação junto ao Banco Central.
+* CODIGO_SOLICITACAO_BANCO_CENTRAL: Chave PIX.
 * codigoConciliacaoSolicitante: Código de uma arrecadação via PIX gerada anteriormente.
 
 ## Exemplo de consulta
