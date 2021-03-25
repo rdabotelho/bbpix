@@ -84,5 +84,6 @@ ArrecadacaoGetResponse result = pix.obterPixArrecadacao(numeroConvenio, codigoCo
 System.out.println("Código de conciliação: " + codigoConciliacaoSolicitante);
 System.out.println("QRCode: " + result.getQrCode());
 System.out.println("Situação: " + result.getEstadoSolicitacao());
+System.out.println("Data Hora Pagamento: " + result.getTimestampPagamento());
 System.out.println("Valor Pago: " + result.getValorPagamento());
 ```

@@ -24,8 +24,8 @@ public class ArrecadacaoGetResponse {
     private String codigoIdentificadorPagamento;
     private BigDecimal valorPagamento;
     private String timestampPagamento;
-    private Integer cpfPagador;
-    private Integer cnpjPagador;
+    private Long cpfPagador;
+    private Long cnpjPagador;
     private String nomeClientePagador;
     private String textoInformativoPagador;
 
@@ -189,19 +189,19 @@ public class ArrecadacaoGetResponse {
         this.timestampPagamento = timestampPagamento;
     }
 
-    public Integer getCpfPagador() {
+    public Long getCpfPagador() {
         return cpfPagador;
     }
 
-    public void setCpfPagador(Integer cpfPagador) {
+    public void setCpfPagador(Long cpfPagador) {
         this.cpfPagador = cpfPagador;
     }
 
-    public Integer getCnpjPagador() {
+    public Long getCnpjPagador() {
         return cnpjPagador;
     }
 
-    public void setCnpjPagador(Integer cnpjPagador) {
+    public void setCnpjPagador(Long cnpjPagador) {
         this.cnpjPagador = cnpjPagador;
     }
 
