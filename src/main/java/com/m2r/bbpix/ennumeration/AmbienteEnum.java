@@ -2,9 +2,9 @@ package com.m2r.bbpix.ennumeration;
 
 public enum AmbienteEnum {
 
-    DESENVOLVIMENTO("dev", "https://oauth.desenv.bb.com.br", " https://api.desenv.bb.com.br","gw-app-key"),
+    DESENVOLVIMENTO("dev", "https://oauth.desenv.bb.com.br", "https://api.desenv.bb.com.br","gw-app-key"),
     HOMOLOGACAO("hmg", "https://oauth.hm.bb.com.br", "https://api.hm.bb.com.br","gw-app-key"),
-    PRODUCAO("prd", "https://oauth.bb.com.br", " https://api.bb.com.br","gw-dev-app-key");
+    PRODUCAO("prd", "https://oauth.bb.com.br", "https://api.bb.com.br","gw-dev-app-key");
 
     private String id;
     private String authUrl;
