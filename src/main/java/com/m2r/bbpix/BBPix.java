@@ -58,6 +58,12 @@ public class BBPix {
     public ArrecadacaoPostResponse gerarPixArrecadacao(ArrecadacaoPostRequest payload) {
         TokenResponse tokenResponse = getToken();
         Integer valor = payload.getValorOriginalSolicitacao().multiply(new BigDecimal("100")).setScale(0, BigDecimal.ROUND_DOWN).intValue();
+        if (payload.getQuantidadeSegundoExpiracao() == null) {
+            throw new RuntimeException("QuantidadeSegundoExpiracao não pode ser nulo");
+        }
+        if (payload.getQuantidadeSegundoExpiracao() < 1) {
+            throw new RuntimeException("QuantidadeSegundoExpiracao precisa ser maior que zero");
+        }
         Date vencimento = null;
         if (payload.getDataVencimentoSolicitacao() != null) {
             try {

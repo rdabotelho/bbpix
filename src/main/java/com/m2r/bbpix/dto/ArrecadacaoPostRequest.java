@@ -15,6 +15,7 @@ public class ArrecadacaoPostRequest {
     public BigDecimal valorJurosSolicitacao = BigDecimal.ZERO;
     public BigDecimal valorMultaSolicitacao = BigDecimal.ZERO;
     public String dataVencimentoSolicitacao;
+    public Integer quantidadeSegundoExpiracao;
 
     public Integer getNumeroConvenio() {
         return numeroConvenio;
@@ -104,6 +105,14 @@ public class ArrecadacaoPostRequest {
         this.dataVencimentoSolicitacao = dataVencimentoSolicitacao;
     }
 
+    public Integer getQuantidadeSegundoExpiracao() {
+        return quantidadeSegundoExpiracao;
+    }
+
+    public void setQuantidadeSegundoExpiracao(Integer quantidadeSegundoExpiracao) {
+        this.quantidadeSegundoExpiracao = quantidadeSegundoExpiracao;
+    }
+
     public static GerarQrCodeBodyBuilder builder() {
         return new GerarQrCodeBodyBuilder();
     }
@@ -147,6 +156,10 @@ public class ArrecadacaoPostRequest {
         }
         public GerarQrCodeBodyBuilder dataVencimentoSolicitacao(String value) {
             body.setDataVencimentoSolicitacao(value);
+            return this;
+        }
+        public GerarQrCodeBodyBuilder quantidadeSegundoExpiracao(Integer value) {
+            body.setQuantidadeSegundoExpiracao(value);
             return this;
         }
         public ArrecadacaoPostRequest build() {

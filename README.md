@@ -40,13 +40,18 @@ BBPixFactory factory = BBPixFactory.builder()
 
 BBPix pix = factory.create();
 
+LocalDateTime meiaNoite = LocalDateTime.of(LocalDate.now(), LocalTime.MIDNIGHT).plusDays(1);
+LocalDateTime agora = LocalDateTime.now();
+Long expiracao = Duration.between(agora, meiaNoite).getSeconds();
+
 ArrecadacaoPostRequest payload = ArrecadacaoPostRequest.builder()
         .numeroConvenio(Const.NUMERO_CONVENIO)
         .codigoSolicitacaoBancoCentralBrasil(Const.CODIGO_SOLICITACAO_BANCO_CENTRAL)
         .emailDevedor("contato@bb.com.br")
         .descricaoSolicitacaoPagamento("teste")
-        .valorOriginalSolicitacao(new BigDecimal("10.00"))
-        .dataVencimentoSolicitacao("20.03.2021")
+        .valorOriginalSolicitacao(new BigDecimal("1.00"))
+        .dataVencimentoSolicitacao(agora.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")))
+        .quantidadeSegundoExpiracao(expiracao.intValue())
         .build();
 
 ArrecadacaoPostResponse result = pix.gerarPixArrecadacao(payload);
