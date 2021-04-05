@@ -21,10 +21,11 @@ Para usar a biblioteca basta configurar a dependência no arquivo do maven.
 
 ## Geração de Arrecadação via PIX
 
-Para gerar uma arrecadação via PIX é necessário 4 informações:
+Para gerar uma arrecadação via PIX é necessário 5 informações:
 
 * CLIENT_ID: Credencial fornecida pelo banco.
 * CLIENT_SECRET: Senha da credencial fornecida pelo banco.
+* APP_KEY: Chave da Aplicação.
 * NUMERO_CONVENIO: Número do convênio de arrecadação do cliente.
 * CODIGO_SOLICITACAO_BANCO_CENTRAL: Chave PIX.
 
@@ -62,10 +63,11 @@ System.out.println("QRCode: " + result.getQrCode());
 
 ## Consulta de Arrecadação via PIX
 
-Para realizar consultar uma arrecadação via PIX é necessário 5 parâmetros:
+Para realizar consultar uma arrecadação via PIX é necessário 6 parâmetros:
 
 * CLIENT_ID: Credencial fornecida pelo banco.
 * CLIENT_SECRET: Senha da credencial fornecida pelo banco.
+* APP_KEY: Chave da Aplicação.
 * NUMERO_CONVENIO: Número do convênio de arrecadação do cliente.
 * CODIGO_SOLICITACAO_BANCO_CENTRAL: Chave PIX.
 * codigoConciliacaoSolicitante: Código de uma arrecadação via PIX gerada anteriormente.
